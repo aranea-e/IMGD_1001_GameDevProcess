@@ -375,7 +375,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1192330778}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.21837261
+  m_Size: 0.20380571
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -662,9 +662,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Centipede\r:\n\r\nMade by:\r\nTimm Adams\r\nIan Perry\r\nJack Martin\r\n\r\nTutorials
-    used:\r\nZigurous:\r\nhttps://zigurous.com/tutorials/centipede \r\n\r\nChristina
-    Creates Games:\r\nhttps://www.youtube.com/watch?v=Sw_tYG8CP-A \r\n\r\nThis project
+  m_text: "Project Hazy Lavender\r:\n\r\nMade by:\r\nTimm Adams\r\nIan Perry\r\nJack
+    Martin\r\n\r\nTutorials used:\r\nZigurous:\r\nhttps://zigurous.com/tutorials/centipede
+    \r\n\r\nChristina Creates Games:\r\nhttps://www.youtube.com/watch?v=Sw_tYG8CP-A
+    \r\n\nKory Code:\nhttps://www.youtube.com/watch?v=oR4dIaj_yu4\n\r\nThis project
     was made for:\r\nIMGD 1001 - Course\r\nProf. Yarbrough - Professor\r\nWorcester
     Polytechnic Institute - University\r\n\r\nAnd special thanks to:\r\nJon Burton
     - Director\r\nJeremy Pardon - Head of Animation\r\nJames Cunlife - Head of Art\r\nJohn
