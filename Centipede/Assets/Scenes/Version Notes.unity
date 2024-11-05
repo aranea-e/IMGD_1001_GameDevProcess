@@ -562,302 +562,305 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Version 0.0.1.0s1:
 
-    - Added main menu
+    - Added Main menu
 
     - Added Credits menu
 
     -
     Added Version Notes menu
 
-    
+    - Added a round counter to main game; When the
+    player or centipede dies, a new round will begin and the counter will increase
 
-    Version 0.0.0.0s1:
 
-    - Added main gameplay
-    loop
+
+    Version
+    0.0.0.0s1:
+
+    - Added main gameplay loop
 
     - Added art assets
 
-    
 
-    This is just placeholder text to test
-    scrolling, nothing to see here
 
-    
+    This
+    is just placeholder text to test scrolling, nothing to see here
 
-    
 
-    
 
-    
 
-    
 
-    
+
+
+
+
+
+
+
 
     Why
     are you still here? None of this is important.
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    Now
-    you''re just being nosy
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
+    Now you''re
+    just being nosy
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     Yeah
     now I bet you feel like an idiot for scrolling this far
@@ -1497,7 +1500,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2030082738}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.061115768
+  m_Size: 0.031608764
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
