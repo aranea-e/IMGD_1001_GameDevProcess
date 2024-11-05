@@ -13,9 +13,11 @@ public class GameManager : MonoBehaviour
     public GameObject gameOver;
     public Text scoreText;
     public Text livesText;
+    public Text roundText;
 
     public int score { get; private set; } = 0;
     public int lives { get; private set; } = 3;
+    public int round { get; private set; } = 1;
 
     private void Awake()
     {
@@ -53,6 +55,7 @@ public class GameManager : MonoBehaviour
     {
         SetScore(0);
         SetLives(3);
+        SetRound(1);
 
         blaster.Respawn();
         centipede.Respawn();
@@ -69,6 +72,10 @@ public class GameManager : MonoBehaviour
         {
             GameOver();
             return;
+        }
+        else
+        {
+            SetRound(round + 1);
         }
 
         mushroomField.Heal();
@@ -91,6 +98,7 @@ public class GameManager : MonoBehaviour
     {
         centipede.speed *= 1.1f;
         centipede.Respawn();
+        SetRound(round + 1);
     }
 
     private void SetScore(int value)
@@ -103,6 +111,12 @@ public class GameManager : MonoBehaviour
     {
         lives = Mathf.Max(value, 0);
         livesText.text = lives.ToString();
+    }
+
+    private void SetRound(int value)
+    {
+        round = value;
+        roundText.text = "Round: " + round.ToString();
     }
 
 }
