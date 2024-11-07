@@ -6,5 +6,6 @@ public class StartupSequence : MonoBehaviour
 {
     void Start() {
         Util.menu.LoadScene(1, false);
+        Audio.updateMusic("menu");
     }
 }

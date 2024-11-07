@@ -26,6 +26,7 @@ public class Dart : MonoBehaviour
             transform.SetParent(null);
             rb.bodyType = RigidbodyType2D.Dynamic;
             boxCollider.enabled = true;
+            Audio.play("shoot");
         }
     }
 

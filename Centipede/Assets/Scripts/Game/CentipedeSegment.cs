@@ -109,12 +109,14 @@ public class CentipedeSegment : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player") && centipede.enabled)
         {
+            Audio.play("death");
             centipede.enabled = false;
             GameManager.Instance.ResetRound();
         }
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Dart") && collision.collider.enabled)
         {
+            Audio.play("hit-c");
             collision.collider.enabled = false;
             centipede.Remove(this);
         }

@@ -96,6 +96,7 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
+        Audio.play("win");
         centipede.speed *= 1.1f;
         centipede.Respawn();
         SetRound(round + 1);

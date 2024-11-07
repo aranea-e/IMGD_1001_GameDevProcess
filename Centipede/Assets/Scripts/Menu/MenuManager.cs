@@ -17,6 +17,7 @@ public class MenuManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown("escape")) {
+            Audio.updateMusic("menu");
             LoadScene(1, true);
         }
     }
@@ -31,7 +32,14 @@ public class MenuManager : MonoBehaviour
     public void LoadScene(int i, bool audio) 
     {
         if (audio) {
-            
+            Audio.play("select");
+        }
+        if (i == 2) {
+            Audio.updateMusic("game");
+        }
+        if (i == 5)
+        {
+            Audio.updateMusic("");
         }
         SceneManager.LoadScene(i);
     }
