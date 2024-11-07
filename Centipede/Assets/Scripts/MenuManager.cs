@@ -17,7 +17,7 @@ public class MenuManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown("escape")) {
-            LoadScene(1);
+            LoadScene(1, true);
         }
     }
 
@@ -25,10 +25,15 @@ public class MenuManager : MonoBehaviour
         canv.enabled = (scene.buildIndex == 1);
     }
 
-    public void LoadScene(int i) 
+    public void ButtonPress(int i) {
+        LoadScene(i, true);
+    }
+    public void LoadScene(int i, bool audio) 
     {
+        if (audio) {
+            
+        }
         SceneManager.LoadScene(i);
-        
     }
 
     public void QuitGame()

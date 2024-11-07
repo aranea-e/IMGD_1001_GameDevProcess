@@ -5,6 +5,6 @@ using UnityEngine;
 public class StartupSequence : MonoBehaviour
 {
     void Start() {
-        Util.menu.LoadScene(1);
+        Util.menu.LoadScene(1, false);
     }
 }
