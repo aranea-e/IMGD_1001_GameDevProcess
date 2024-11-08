@@ -21,7 +21,7 @@ public class Dart : MonoBehaviour
 
     private void Update()
     {
-        if (rb.isKinematic && Input.GetButton("Fire1"))
+        if (rb.isKinematic && PlayerInputs.fire)
         {
             transform.SetParent(null);
             rb.bodyType = RigidbodyType2D.Dynamic;

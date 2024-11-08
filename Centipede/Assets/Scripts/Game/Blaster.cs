@@ -15,14 +15,17 @@ public class Blaster : MonoBehaviour
 
     private void Update()
     {
-        direction.x = Input.GetAxis("Horizontal");
-        direction.y = Input.GetAxis("Vertical");
+        direction.x = PlayerInputs.direction.x;
+        direction.y = PlayerInputs.direction.y;
+        if (direction.magnitude > 1) {
+            direction = direction.normalized;
+        }
     }
 
     private void FixedUpdate()
     {
         Vector2 position = rb.position;
-        position += speed * Time.fixedDeltaTime * direction.normalized;
+        position += speed * Time.fixedDeltaTime * direction;
         rb.MovePosition(position);
     }
 
