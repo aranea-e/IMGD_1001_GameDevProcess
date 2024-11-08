@@ -1334,6 +1334,10 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   fire: 0
   mode: keyboard
+  controllerdirection: {x: 0, y: 0}
+  controllershoot: 0
+  controllermenu: 0
+  controllerstart: 0
 --- !u!4 &661736566
 Transform:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Controller : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Controller : MonoBehaviour
     [SerializeField] bool fire;
     [SerializeField] string mode = "keyboard";
 
+    #region keyboard/mouse
     KeyCode up = KeyCode.W;
     KeyCode left = KeyCode.A;
     KeyCode down = KeyCode.S;
@@ -15,6 +17,31 @@ public class Controller : MonoBehaviour
     KeyCode firekey = KeyCode.Space;
     KeyCode follow = KeyCode.Mouse0;
     bool alwaysFollow = false;
+    #endregion
+
+    #region controller
+    PlayerControls controls;
+    [SerializeField] Vector2 controllerdirection;
+    [SerializeField] bool controllershoot;
+    [SerializeField] bool controllermenu;
+    [SerializeField] bool controllerstart;
+    #endregion
+
+    void Awake() {
+        controls = new PlayerControls();
+
+        controls.Gameplay.Move.performed += ctx => controllerdirection = ctx.ReadValue<Vector2>();
+        controls.Gameplay.Move.canceled += ctx => controllerdirection = Vector2.zero;
+
+        controls.Gameplay.Shoot.performed += ctx => controllershoot = true;
+        controls.Gameplay.Shoot.canceled += ctx => controllershoot = false;
+
+        //controls.Gameplay.Menu.performed += ctx => controllermenu = true;
+        //controls.Gameplay.Menu.canceled += ctx => controllermenu = false;
+        //
+        //controls.Gameplay.cStart.performed += ctx => controllerstart = true;
+        //controls.Gameplay.cStart.canceled += ctx => controllerstart = false;
+    }
 
     void Update() {
         switch (mode)
@@ -32,7 +59,7 @@ public class Controller : MonoBehaviour
             break;
 
             case "controller":
-            //todo
+            ReadController();
             break;
 
             default:
@@ -63,8 +90,26 @@ public class Controller : MonoBehaviour
         direction = Util.mousePosition() - (Vector2) b.transform.position;
     }
 
+    void ReadController() {
+        fire = controllershoot;
+        direction = controllerdirection;
+    }
+
     void SetInputs() {
         PlayerInputs.direction = direction;
         PlayerInputs.fire = fire;
     }
+
+    #region controller inputs
+
+    void OnEnable() {
+        controls.Gameplay.Enable();
+    }
+
+    void OnDisable() {
+        controls.Gameplay.Disable();
+    }
+
+
+    #endregion
 }
