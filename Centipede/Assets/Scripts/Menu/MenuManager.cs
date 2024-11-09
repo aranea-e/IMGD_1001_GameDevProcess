@@ -16,7 +16,7 @@ public class MenuManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("escape")) {
+        if (Input.GetKeyDown("escape") || PlayerInputs.menu) {
             Audio.updateMusic("menu");
             LoadScene(1, true);
         }

@@ -6,5 +6,6 @@ public static class PlayerInputs
 {
     public static Vector2 direction { get; set; }
     public static bool fire { get; set; }
+    public static bool menu { get; set; }
 }
 

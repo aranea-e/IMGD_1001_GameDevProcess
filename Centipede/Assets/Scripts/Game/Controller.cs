@@ -7,7 +7,7 @@ public class Controller : MonoBehaviour
 {
     [SerializeField] Vector2 direction;
     [SerializeField] bool fire;
-    [SerializeField] string mode = "keyboard";
+    public string mode = "keyboard";
 
     #region keyboard/mouse
     KeyCode up = KeyCode.W;
@@ -15,7 +15,8 @@ public class Controller : MonoBehaviour
     KeyCode down = KeyCode.S;
     KeyCode right = KeyCode.D;
     KeyCode firekey = KeyCode.Space;
-    KeyCode follow = KeyCode.Mouse0;
+    KeyCode follow = KeyCode.Mouse1;
+    KeyCode firecursor = KeyCode.Mouse0;
     bool alwaysFollow = false;
     #endregion
 
@@ -24,7 +25,6 @@ public class Controller : MonoBehaviour
     [SerializeField] Vector2 controllerdirection;
     [SerializeField] bool controllershoot;
     [SerializeField] bool controllermenu;
-    [SerializeField] bool controllerstart;
     #endregion
 
     void Awake() {
@@ -81,7 +81,7 @@ public class Controller : MonoBehaviour
     }
 
     void ReadCursor() {
-        fire = Input.GetKey(firekey);
+        fire = Input.GetKey(firecursor);
         Blaster b = FindObjectOfType<Blaster>();
         if (b == null || (!alwaysFollow && !Input.GetKey(follow))) {
             direction = Vector2.zero;
@@ -98,6 +98,7 @@ public class Controller : MonoBehaviour
     void SetInputs() {
         PlayerInputs.direction = direction;
         PlayerInputs.fire = fire;
+        PlayerInputs.menu = (controllermenu && (mode == "controller"));
     }
 
     #region controller inputs
