@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StartupSequence : MonoBehaviour
 {
-    void Start() {
+    void LoadMenu() {
         Util.menu.LoadScene(1, false);
         Audio.updateMusic("menu");
     }
