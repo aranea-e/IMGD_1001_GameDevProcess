@@ -844,314 +844,41 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Version 0.0.1.0s1:
+  m_text: 'Version 0.0.1.s2:
 
-    - Added Main menu
+    - Added options for controls (see controls menu
+    for how to play)
+
+    - A new round no longer starts when the player has lost
+    a life
+
+    - Removed unnecessary placeholder text from version notes now that
+    it naturally can be scrolled through
+
+
+    Version 0.0.1.0s1:
+
+    - Added Main
+    menu
 
     - Added Credits menu
 
-    -
-    Added Version Notes menu
+    - Added Version Notes menu
 
-    - Added a Quit Game button
+    - Added a
+    Quit Game button
 
-    - Added a round
-    counter to main game; When the player or centipede dies, a new round will begin
-    and the counter will increase
+    - Added a round counter to main game; When the player or
+    centipede dies, a new round will begin and the counter will increase
 
 
 
-    Version 0.0.0.0s1:
+    Version
+    0.0.0.0s1:
 
-    - Added main gameplay
-    loop
+    - Added main gameplay loop
 
-    - Added art assets
-
-
-
-    This is just placeholder text to test scrolling,
-    nothing to see here
-
-
-
-
-
-
-
-
-
-
-
-
-
-    Why are you still here? None of this is
-    important.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    Now you''re just being nosy
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    Yeah
-    now I bet you feel like an idiot for scrolling this far
-
-'
+    - Added art assets'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2055,7 +1782,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2030082738}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.031369396
+  m_Size: 0.41313842
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

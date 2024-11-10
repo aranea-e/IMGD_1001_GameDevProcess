@@ -73,10 +73,6 @@ public class GameManager : MonoBehaviour
             GameOver();
             return;
         }
-        else
-        {
-            SetRound(round + 1);
-        }
 
         mushroomField.Heal();
         centipede.Respawn();
