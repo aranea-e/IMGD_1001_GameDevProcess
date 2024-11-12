@@ -855,28 +855,33 @@ MonoBehaviour:
     - Removed unnecessary placeholder text from version notes now that
     it naturally can be scrolled through
 
+    - Added splash screen
+
+    - Added
+    Music and sound effects
+
 
     Version 0.0.1.0s1:
 
-    - Added Main
-    menu
+    - Added Main menu
 
-    - Added Credits menu
+    -
+    Added Credits menu
 
     - Added Version Notes menu
 
-    - Added a
-    Quit Game button
+    - Added a Quit Game button
 
-    - Added a round counter to main game; When the player or
-    centipede dies, a new round will begin and the counter will increase
+    -
+    Added a round counter to main game; When the player or centipede dies, a new
+    round will begin and the counter will increase
 
 
 
-    Version
-    0.0.0.0s1:
+    Version 0.0.0.0s1:
 
-    - Added main gameplay loop
+    -
+    Added main gameplay loop
 
     - Added art assets'
   m_isRightToLeft: 0
@@ -1782,7 +1787,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2030082738}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.41313842
+  m_Size: 0.378979
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
