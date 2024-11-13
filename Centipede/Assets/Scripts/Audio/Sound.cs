@@ -18,6 +18,8 @@ public class Sound {
     public float pitch;
     public bool loop;
 
+    public int type;
+
     [HideInInspector]
     public AudioSource source;
 }

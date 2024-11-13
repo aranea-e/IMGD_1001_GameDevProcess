@@ -10,6 +10,7 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour {
     public Sound[] sounds;
     string state = "";
+    public float[] volumes = {.8f, .8f, .8f};
 
     void Awake() {
         Audio.Setup(this);
@@ -46,6 +47,21 @@ public class AudioManager : MonoBehaviour {
     public void changeVolume (float v) {
         foreach (Sound s in sounds) {
             s.source.volume = v;
+        }
+    }
+
+    public void changeVolume (int type, float v) {
+        volumes[type] = v;
+        if (type == 0) {
+            foreach (Sound s in sounds) {
+                s.source.volume = volumes[0] * volumes[s.type];
+            }
+        } else {
+            foreach (Sound s in sounds) {
+                if (s.type == type) {
+                    s.source.volume = volumes[0] * volumes[s.type];
+                }
+            }
         }
     }
 
