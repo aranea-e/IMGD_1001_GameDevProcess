@@ -1346,8 +1346,9 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   fire: 0
   mode: keyboard
+  pos: {x: 30, y: -10}
   controllerdirection: {x: 0, y: 0}
-  controllershoot: 0
+  firecontroller: 0
   controllermenu: 0
 --- !u!4 &661736566
 Transform:

@@ -7,9 +7,20 @@ public class Joystick : MonoBehaviour
     int spriteNum;
     [SerializeField] Sprite[] sprites;
     [SerializeField] SpriteRenderer sprite;
+    [SerializeField] SpriteRenderer basesprite;
+
+    public bool active;
 
     void Update()
     {
+        if (!active)
+        {
+            basesprite.enabled = false;
+            sprite.enabled = false;
+            return;
+        }
+        basesprite.enabled = true;
+        sprite.enabled = true;
         spriteNum = findSprite();
         sprite.sprite = sprites[spriteNum];
     }
