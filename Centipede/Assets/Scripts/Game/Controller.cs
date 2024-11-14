@@ -14,21 +14,21 @@ public class Controller : MonoBehaviour
     KeyCode left = KeyCode.A;
     KeyCode down = KeyCode.S;
     KeyCode right = KeyCode.D;
-    KeyCode firekey = KeyCode.Space;
+    public KeyCode firekey = KeyCode.Space;
     #endregion
 
     #region pointer
-    KeyCode follow = KeyCode.Mouse1;
-    KeyCode firecursor = KeyCode.Mouse0;
-    bool alwaysFollow = false;
+    public KeyCode follow = KeyCode.Mouse1;
+    public KeyCode firecursor = KeyCode.Mouse0;
+    public bool alwaysFollow = false;
     #endregion
 
     #region joystick
     [SerializeField] Vector2 pos;
     float sensitivity = 0.5f;
-    KeyCode drag = KeyCode.Mouse1;
-    KeyCode firejoystick = KeyCode.Space;
-    bool alwaysDrag = false;
+    public KeyCode drag = KeyCode.Mouse1;
+    public KeyCode firejoystick = KeyCode.Space;
+    public bool alwaysDrag = false;
     #endregion
 
     #region controller
