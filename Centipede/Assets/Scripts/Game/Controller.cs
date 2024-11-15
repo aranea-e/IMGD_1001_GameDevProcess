@@ -24,8 +24,8 @@ public class Controller : MonoBehaviour
     #endregion
 
     #region joystick
-    [SerializeField] Vector2 pos;
-    float sensitivity = 0.5f;
+    public Vector2 pos;
+    public float sensitivity = 0.5f;
     public KeyCode drag = KeyCode.Mouse1;
     public KeyCode firejoystick = KeyCode.Space;
     public bool alwaysDrag = false;
