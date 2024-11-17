@@ -1346,7 +1346,15 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   fire: 0
   mode: keyboard
+  firekey: 32
+  follow: 324
+  firecursor: 323
+  alwaysFollow: 0
   pos: {x: 30, y: -10}
+  sensitivity: 0.5
+  drag: 324
+  firejoystick: 32
+  alwaysDrag: 0
   controllerdirection: {x: 0, y: 0}
   firecontroller: 0
   controllermenu: 0

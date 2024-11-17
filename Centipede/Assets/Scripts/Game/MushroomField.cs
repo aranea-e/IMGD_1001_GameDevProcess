@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MushroomField : MonoBehaviour
 {
-    private BoxCollider2D area;
+    public BoxCollider2D area;
     public Mushroom prefab;
     public int amount = 50;
 

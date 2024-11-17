@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     private Blaster blaster;
     private Centipede centipede;
     private MushroomField mushroomField;
+    
+    public Mushroom mushroomPrefab;
 
     public GameObject gameOver;
     public Text scoreText;
@@ -93,9 +95,8 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
         Audio.play("win");
-        centipede.speed *= 1.1f;
-        centipede.Respawn();
         SetRound(round + 1);
+        centipede.Respawn();
     }
 
     private void SetScore(int value)
@@ -116,4 +117,16 @@ public class GameManager : MonoBehaviour
         roundText.text = "Round: " + round.ToString();
     }
 
+    public void SpawnMushroom(Vector2 position) 
+    {
+        position = Util.GridPosition(position);
+        if (position.x < mushroomField.area.bounds.min.x ||
+            position.x > mushroomField.area.bounds.max.x ||
+            position.y < mushroomField.area.bounds.min.y ||
+            position.y > mushroomField.area.bounds.max.y)
+        {
+            return;
+        }
+        Instantiate(mushroomPrefab, position, Quaternion.identity);
+    }
 }

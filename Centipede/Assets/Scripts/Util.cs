@@ -10,4 +10,11 @@ public static class Util
     {
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
+
+    public static Vector2 GridPosition(Vector2 position)
+    {
+        position.x = Mathf.Round(position.x);
+        position.y = Mathf.Round(position.y);
+        return position;
+    }
 }

@@ -7,7 +7,6 @@ public class Centipede : MonoBehaviour
 
     [Header("Prefabs")]
     public CentipedeSegment segmentPrefab;
-    public Mushroom mushroomPrefab;
 
     [Header("Sprites")]
     public Sprite headSprite;
@@ -42,8 +41,7 @@ public class Centipede : MonoBehaviour
         int points = segment.isHead ? pointsHead : pointsBody;
         GameManager.Instance.IncreaseScore(points);
 
-        Vector2 position = GridPosition(segment.transform.position);
-        Instantiate(mushroomPrefab, position, Quaternion.identity);
+        GameManager.Instance.SpawnMushroom(segment.transform.position);
 
         if (segment.ahead != null) {
             segment.ahead.behind = null;
@@ -65,6 +63,12 @@ public class Centipede : MonoBehaviour
 
     public void Respawn()
     {
+        speed = 20f;
+        for (int i = 1; i < GameManager.Instance.round; i++)
+        {
+            speed *= 1.1f;
+        }
+
         foreach (CentipedeSegment segment in segments) {
             Destroy(segment.gameObject);
         }
@@ -73,7 +77,7 @@ public class Centipede : MonoBehaviour
 
         for (int i = 0; i < size; i++)
         {
-            Vector2 position = GridPosition(transform.position) + (Vector2.left * i);
+            Vector2 position = Util.GridPosition(transform.position) + (Vector2.left * i);
             CentipedeSegment segment = Instantiate(segmentPrefab, position, Quaternion.identity, transform);
             segment.spriteRenderer.sprite = i == 0 ? headSprite : bodySprite;
             segment.centipede = this;
@@ -100,11 +104,6 @@ public class Centipede : MonoBehaviour
         }
     }
 
-    private Vector2 GridPosition(Vector2 position)
-    {
-        position.x = Mathf.Round(position.x);
-        position.y = Mathf.Round(position.y);
-        return position;
-    }
+    
 
 }
