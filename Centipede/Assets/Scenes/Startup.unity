@@ -732,6 +732,13 @@ MonoBehaviour:
     loop: 1
     type: 2
     source: {fileID: 0}
+  - name: land
+    clip: {fileID: 8300000, guid: abcf24cebbafd1b40a8f2d8668367185, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    type: 1
+    source: {fileID: 0}
   volumes:
   - 0.8
   - 0.8

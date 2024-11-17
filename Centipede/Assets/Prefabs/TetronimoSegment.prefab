@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2807133297782740731}
   - component: {fileID: 1081974767244017842}
   - component: {fileID: 8716555789421992357}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TetronimoSegment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,6 +144,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 0}
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 384
   sprites:
   - {fileID: -2065165102, guid: 6beb8d6e48391b648be499ecd826b87e, type: 3}
   - {fileID: 994865868, guid: 6beb8d6e48391b648be499ecd826b87e, type: 3}

@@ -24,6 +24,26 @@ public class Tetronimo : MonoBehaviour
         }
     }
 
+    public void newRound() {
+        destroyTetronimo(2);
+        sTime = 0.0f;
+        mTimeElapsed = 0.0f;
+        if (GameManager.Instance.round == 1)
+        {
+            sChance = -1f;
+            return;
+        }
+        sChance = 0.1f;
+        sRate = 1.0f;
+        mTime = 5.0f;
+        for (int i = 2; i < GameManager.Instance.round; i++)
+        {
+            sChance *= 1.25f;
+            sRate *= 0.90f;
+            mTime *= 0.9f;
+        }
+    }
+
     void checkSpawn() 
     {
         mTimeElapsed += Time.deltaTime;
@@ -115,17 +135,20 @@ public class Tetronimo : MonoBehaviour
 
     [ContextMenu("test destroy")]
     public void destroyTetronimo() {
-        destroyTetronimo(false);
+        destroyTetronimo(0);
     }
-    public void destroyTetronimo(bool givePoints) {
-        if (givePoints)
+    public void destroyTetronimo(int destType) {
+        if (destType == 1)
         {
             GameManager.Instance.IncreaseScore(points);
         }
         
         foreach (TetronimoSegment segment in FindObjectsOfType<TetronimoSegment>())
         {
-            GameManager.Instance.SpawnMushroom(segment.transform.position);
+            if (destType == 1)
+            {
+                GameManager.Instance.SpawnMushroom(segment.transform.position);
+            }
             Destroy(segment.gameObject);
         }
 

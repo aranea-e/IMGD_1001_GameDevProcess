@@ -8,6 +8,8 @@ public class TetronimoSegment : MonoBehaviour
     public BoxCollider2D boxCollider { get; private set; }
     public Tetronimo t;
 
+    public LayerMask collisionMask;
+
     float speed;
 
     [SerializeField] Sprite[] sprites;
@@ -64,5 +66,36 @@ public class TetronimoSegment : MonoBehaviour
     private void OnDisable()
     {
         boxCollider.enabled = false;
+    }
+
+    void Update() {
+        Vector2 targetPosition = new Vector2(transform.position.x + (((speed / 2) * PlayerInputs.direction.x) * Time.deltaTime),
+                                             transform.position.y - (speed * Time.deltaTime));
+        if (Physics2D.OverlapBox(targetPosition, Vector2.zero, 0f, collisionMask) || targetPosition.y < -25)
+        {
+            if (Physics2D.OverlapBox(targetPosition, Vector2.zero, 0f, collisionMask))
+            {
+                Audio.play("land");
+            }
+            t.destroyTetronimo();
+            return;
+        }
+        transform.position = targetPosition;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            Audio.play("death");
+            t.destroyTetronimo(2);
+            GameManager.Instance.ResetRound();
+        }
+    
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Dart"))
+        {
+            Audio.play("hit-c");
+            t.destroyTetronimo(1);
+        }
     }
 }

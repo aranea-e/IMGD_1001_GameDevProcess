@@ -557,12 +557,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tetronimoPrefab: {fileID: 8716555789421992357, guid: a4cf026370581b240a6fbca3c4f9b7b6, type: 3}
+  points: 100
   sChance: 0.1
   sRate: 1
   sTime: 0
-  sActive: 0
   mTime: 5
   mTimeElapsed: 0
+  sActive: 0
+  currentType: 
 --- !u!4 &568906377
 Transform:
   m_ObjectHideFlags: 0
@@ -1205,7 +1207,7 @@ MonoBehaviour:
   bodySprite: {fileID: 21300000, guid: 781a902076fe52345aabf10f4d9ff0d4, type: 3}
   collisionMask:
     serializedVersion: 2
-    m_Bits: 896
+    m_Bits: 1920
   homeArea: {fileID: 1926930956}
   speed: 20
   size: 12
@@ -1606,6 +1608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df30228ad4bfd3042a38e44e0774b37f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  area: {fileID: 0}
   prefab: {fileID: 2645554414229776227, guid: 7af21016a4b36c541b4d45c556310730, type: 3}
   amount: 50
 --- !u!61 &2064053029
