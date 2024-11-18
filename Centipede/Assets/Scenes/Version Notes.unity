@@ -981,16 +981,28 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Version 0.0.1.s2:
+  m_text: 'Version 0.0.1.s3:
 
-    - Added options for controls (see controls menu
-    for how to play)
+    - Added soun efects menu
 
-    - A new round no longer starts when the player has lost
-    a life
+    - Added additonal
+    options to controls, such as Joystick aiming, sensitivity and additional keybindiong
+    options for pointer and keyboard
 
-    - Removed unnecessary placeholder text from version notes now that
-    it naturally can be scrolled through
+    - Added Tetriminoe enemy that spawns in
+    level 2
+
+
+    Version 0.0.1.s2:
+
+    - Added options for controls (see controls
+    menu for how to play)
+
+    - A new round no longer starts when the player has
+    lost a life
+
+    - Removed unnecessary placeholder text from version notes now
+    that it naturally can be scrolled through
 
     - Added splash screen
 
@@ -2057,7 +2069,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2030082738}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.378979
+  m_Size: 0.2847787
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
