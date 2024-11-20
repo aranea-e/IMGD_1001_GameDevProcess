@@ -77,28 +77,55 @@ public class KeybindToggles : MonoBehaviour
         switch (group)
         {
             case 0:
+            if ((i == 0 && toggles[0].isOn && !(c.firekey == KeyCode.Space)) 
+            || (i == 1 && toggles[1].isOn && !(c.firekey == KeyCode.Mouse0)))
+            {
+                Audio.play("select");
+            }
             if (i == 0 && toggles[0].isOn) { c.firekey = KeyCode.Space; }
             if (i == 1 && toggles[1].isOn) { c.firekey = KeyCode.Mouse0; }
             break;
 
             case 1:
+            if ((i == 0 && toggles[0].isOn && !(c.follow == KeyCode.Mouse0 && c.alwaysFollow == false)) 
+            || (i == 1 && toggles[1].isOn && !(c.follow == KeyCode.Mouse1 && c.alwaysFollow == false))
+            || (i == 2 && toggles[2].isOn && !(c.alwaysFollow == true)))
+            {
+                Audio.play("select");
+            }
             if (i == 0 && toggles[0].isOn) { c.follow = KeyCode.Mouse0; c.alwaysFollow = false; };
             if (i == 1 && toggles[1].isOn) { c.follow = KeyCode.Mouse1; c.alwaysFollow = false; };
             if (i == 2 && toggles[2].isOn) { c.alwaysFollow = true; };
             break;
 
             case 2:
+            if ((i == 0 && toggles[0].isOn && !(c.firecursor == KeyCode.Space)) 
+            || (i == 1 && toggles[1].isOn && !(c.firecursor == KeyCode.Mouse0)))
+            {
+                Audio.play("select");
+            }
             if (i == 0 && toggles[0].isOn) { c.firecursor = KeyCode.Space; }
             if (i == 1 && toggles[1].isOn) { c.firecursor = KeyCode.Mouse0; }
             break;
 
             case 3:
+            if ((i == 0 && toggles[0].isOn && !(c.drag == KeyCode.Mouse0 && c.alwaysDrag == false)) 
+            || (i == 1 && toggles[1].isOn && !(c.drag == KeyCode.Mouse1 && c.alwaysDrag == false))
+            || (i == 2 && toggles[2].isOn && !(c.alwaysDrag == true)))
+            {
+                Audio.play("select");
+            }
             if (i == 0 && toggles[0].isOn) { c.drag = KeyCode.Mouse0; c.alwaysDrag = false; };
             if (i == 1 && toggles[1].isOn) { c.drag = KeyCode.Mouse1; c.alwaysDrag = false; };
             if (i == 2 && toggles[2].isOn) { c.alwaysDrag = true; };
             break;
 
             case 4:
+            if ((i == 0 && toggles[0].isOn && !(c.firejoystick == KeyCode.Space)) 
+            || (i == 1 && toggles[1].isOn && !(c.firejoystick == KeyCode.Mouse0)))
+            {
+                Audio.play("select");
+            }
             if (i == 0 && toggles[0].isOn) { c.firejoystick = KeyCode.Space; }
             if (i == 1 && toggles[1].isOn) { c.firejoystick = KeyCode.Mouse0; }
             break;

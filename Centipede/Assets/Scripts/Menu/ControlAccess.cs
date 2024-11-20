@@ -34,6 +34,11 @@ public class ControlAccess : MonoBehaviour
     }
 
     public void changeControls(string c) {
+        if (FindObjectOfType<Controller>().mode == c)
+        {
+            return;
+        }
+        Audio.play("select");
         FindObjectOfType<Controller>().mode = c;
     }
 }
