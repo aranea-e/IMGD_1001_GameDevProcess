@@ -891,6 +891,13 @@ MonoBehaviour:
     loop: 0
     type: 1
     source: {fileID: 0}
+  - name: hit-f
+    clip: {fileID: 8300000, guid: 92b3ae945c635704db8fbdac38158914, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    type: 1
+    source: {fileID: 0}
   volumes:
   - 0.8
   - 0.8

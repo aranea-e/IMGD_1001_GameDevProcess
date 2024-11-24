@@ -58,7 +58,6 @@ public class Tetronimo : MonoBehaviour
             if (Random.Range(0.0f, 1.0f) < sChance)
             {
                 sActive = true;
-                sTime = 0.0f;
                 mTimeElapsed = 0.0f;
                 Spawn();
             }

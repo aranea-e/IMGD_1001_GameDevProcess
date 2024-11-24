@@ -44,4 +44,14 @@ public class MushroomField : MonoBehaviour
         }
     }
 
+    public bool MushroomAt(Vector2 pos) {
+        foreach (Mushroom m in FindObjectsOfType<Mushroom>())
+        {
+            if (Util.GridPosition(m.transform.position) == Util.GridPosition(pos))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }
