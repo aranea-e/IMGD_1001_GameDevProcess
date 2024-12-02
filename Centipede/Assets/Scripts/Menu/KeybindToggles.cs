@@ -82,8 +82,10 @@ public class KeybindToggles : MonoBehaviour
             {
                 Audio.play("select");
             }
-            if (i == 0 && toggles[0].isOn) { c.firekey = KeyCode.Space; }
-            if (i == 1 && toggles[1].isOn) { c.firekey = KeyCode.Mouse0; }
+            if (i == 0 && toggles[0].isOn) { c.firekey = KeyCode.Space; 
+                                             PlayerPrefs.SetInt("Keyboard Fire", 0); }
+            if (i == 1 && toggles[1].isOn) { c.firekey = KeyCode.Mouse0; 
+                                             PlayerPrefs.SetInt("Keyboard Fire", 1); }
             break;
 
             case 1:
@@ -93,9 +95,12 @@ public class KeybindToggles : MonoBehaviour
             {
                 Audio.play("select");
             }
-            if (i == 0 && toggles[0].isOn) { c.follow = KeyCode.Mouse0; c.alwaysFollow = false; };
-            if (i == 1 && toggles[1].isOn) { c.follow = KeyCode.Mouse1; c.alwaysFollow = false; };
-            if (i == 2 && toggles[2].isOn) { c.alwaysFollow = true; };
+            if (i == 0 && toggles[0].isOn) { c.follow = KeyCode.Mouse0; c.alwaysFollow = false; 
+                                             PlayerPrefs.SetInt("Pointer Move", 0); };
+            if (i == 1 && toggles[1].isOn) { c.follow = KeyCode.Mouse1; c.alwaysFollow = false; 
+                                             PlayerPrefs.SetInt("Pointer Move", 1); };
+            if (i == 2 && toggles[2].isOn) { c.alwaysFollow = true; 
+                                             PlayerPrefs.SetInt("Pointer Move", 2); };
             break;
 
             case 2:
@@ -104,8 +109,10 @@ public class KeybindToggles : MonoBehaviour
             {
                 Audio.play("select");
             }
-            if (i == 0 && toggles[0].isOn) { c.firecursor = KeyCode.Space; }
-            if (i == 1 && toggles[1].isOn) { c.firecursor = KeyCode.Mouse0; }
+            if (i == 0 && toggles[0].isOn) { c.firecursor = KeyCode.Space; 
+                                             PlayerPrefs.SetInt("Pointer Fire", 0); }
+            if (i == 1 && toggles[1].isOn) { c.firecursor = KeyCode.Mouse0; 
+                                             PlayerPrefs.SetInt("Pointer Fire", 1); }
             break;
 
             case 3:
@@ -115,9 +122,12 @@ public class KeybindToggles : MonoBehaviour
             {
                 Audio.play("select");
             }
-            if (i == 0 && toggles[0].isOn) { c.drag = KeyCode.Mouse0; c.alwaysDrag = false; };
-            if (i == 1 && toggles[1].isOn) { c.drag = KeyCode.Mouse1; c.alwaysDrag = false; };
-            if (i == 2 && toggles[2].isOn) { c.alwaysDrag = true; };
+            if (i == 0 && toggles[0].isOn) { c.drag = KeyCode.Mouse0; c.alwaysDrag = false; 
+                                             PlayerPrefs.SetInt("Joystick Move", 0); };
+            if (i == 1 && toggles[1].isOn) { c.drag = KeyCode.Mouse1; c.alwaysDrag = false; 
+                                             PlayerPrefs.SetInt("Joystick Move", 1); };
+            if (i == 2 && toggles[2].isOn) { c.alwaysDrag = true; 
+                                             PlayerPrefs.SetInt("Joystick Move", 2); };
             break;
 
             case 4:
@@ -126,8 +136,10 @@ public class KeybindToggles : MonoBehaviour
             {
                 Audio.play("select");
             }
-            if (i == 0 && toggles[0].isOn) { c.firejoystick = KeyCode.Space; }
-            if (i == 1 && toggles[1].isOn) { c.firejoystick = KeyCode.Mouse0; }
+            if (i == 0 && toggles[0].isOn) { c.firejoystick = KeyCode.Space; 
+                                             PlayerPrefs.SetInt("Joystick Fire", 0); }
+            if (i == 1 && toggles[1].isOn) { c.firejoystick = KeyCode.Mouse0; 
+                                             PlayerPrefs.SetInt("Joystick Fire", 1); }
             break;
         }
     }

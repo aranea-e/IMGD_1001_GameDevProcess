@@ -92,6 +92,7 @@ public class Invader : MonoBehaviour
         if (destType == 1)
         {
             GameManager.Instance.IncreaseScore(points);
+            PlayerPrefs.SetInt("Invaders", 1);
         }
         Destroy(FindObjectOfType<InvaderInstance>().gameObject);
         if (destType == 2)

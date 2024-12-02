@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     private Fruit fruit;
     private Invader invader;
     private POW pow;
+    private Pooka pooka;
     
     public Mushroom mushroomPrefab;
 
@@ -50,6 +51,7 @@ public class GameManager : MonoBehaviour
         fruit = FindObjectOfType<Fruit>();
         invader = FindObjectOfType<Invader>();
         pow = FindObjectOfType<POW>();
+        pooka = FindObjectOfType<Pooka>();
 
         NewGame();
     }
@@ -76,6 +78,7 @@ public class GameManager : MonoBehaviour
         fruit.newRound();
         invader.newRound();
         pow.newRound();
+        pooka.newRound();
     }
 
     public void ResetRound()
@@ -95,6 +98,7 @@ public class GameManager : MonoBehaviour
         fruit.newRound();
         invader.newRound();
         pow.newRound();
+        pooka.newRound();
     }
 
     private void GameOver()
@@ -117,6 +121,7 @@ public class GameManager : MonoBehaviour
         fruit.newRound();
         invader.newRound();
         pow.newRound();
+        pooka.newRound();
     }
 
     private void SetScore(int value)

@@ -141,6 +141,7 @@ public class Tetronimo : MonoBehaviour
         if (destType == 1 || destType == 3)
         {
             GameManager.Instance.IncreaseScore(points);
+            PlayerPrefs.SetInt("Tetris", 1);
         }
         
         foreach (TetronimoSegment segment in FindObjectsOfType<TetronimoSegment>())

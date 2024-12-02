@@ -15,6 +15,12 @@ public static class Audio
         am = AM;
     }
 
+    public static void Prefs() {
+        changeVolume(0, PlayerPrefs.GetFloat("Master", 0.8f));
+        changeVolume(1, PlayerPrefs.GetFloat("SFX", 0.8f));
+        changeVolume(2, PlayerPrefs.GetFloat("Music", 0.8f));
+    }
+
     public static void play (string name) {
         am.play(name);
     }

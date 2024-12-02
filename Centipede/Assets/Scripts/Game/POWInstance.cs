@@ -11,6 +11,12 @@ public class POWInstance : MonoBehaviour
             FindObjectOfType<POW>().destroyPOW(this, 1);
         }
 
+        if (collision.gameObject.layer == LayerMask.NameToLayer("EnemyDart")) {
+            Audio.play("hit-p");
+            Destroy(collision.gameObject);
+            FindObjectOfType<POW>().destroyPOW(this, 1);
+        }
+
         if (collision.gameObject.layer == LayerMask.NameToLayer("POW")) {
             FindObjectOfType<POW>().destroyPOW(this, 1);
         }

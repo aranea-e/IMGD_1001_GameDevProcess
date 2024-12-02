@@ -29,5 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: f91ea7e49c7ba1c4c8e48cb3775e59ba
+  - enabled: 1
+    path: Assets/Scenes/Trophy Room.unity
+    guid: f2ae894c8f6b2724c9bc172f7e4ba0ac
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b6a37c7d6b882ab43b254a0be6ca4850, type: 2}

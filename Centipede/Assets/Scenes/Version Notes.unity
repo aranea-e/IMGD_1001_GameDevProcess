@@ -981,65 +981,74 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Version 0.0.1.s5:
 
-    -Added POW blocks which spawn on level 3 and onward
+    -Added a Trophy screen, which unlocks game information
+    upon killing relevant enemies or activating relevant powerups
+
+    -Added POW
+    blocks which spawn on level 3 and onward
+
+    -Added Pookas which spawn on levels
+    4, 5, and 8+
+
+    -Settings now save if application is closed
 
 
-    Version
-    0.0.1.s4:
+    Version 0.0.1.s4:
 
-    -Redid menus to get rid of default assets and replace the with
-    custom fonts, UI textures, and animations
+    -Redid
+    menus to get rid of default assets and replace the with custom fonts, UI textures,
+    and animations
 
-    -Added Pac-Man fruits which spawn
-    on all levels
+    -Added Pac-Man fruits which spawn on all levels
 
-    -Added Space Invader which spawns on levels 3, 5, and 7+ (Tetronimo
-    has been moved to levels 2, 4, and 6+)
+    -Added
+    Space Invader which spawns on levels 3, 5, and 7+ (Tetronimo has been moved to
+    levels 2, 4, and 6+)
 
 
     Version 0.0.1.s3:
 
-    - Added sound
-    effects menu
-
-    - Added additonal options to controls, such as Joystick aiming,
-    sensitivity and additional keybindiong options for pointer and keyboard
+    - Added sound effects menu
 
     -
-    Added Tetrimino enemy that spawns in level 2
+    Added additonal options to controls, such as Joystick aiming, sensitivity and
+    additional keybindiong options for pointer and keyboard
+
+    - Added Tetrimino
+    enemy that spawns in level 2
 
 
     Version 0.0.1.s2:
 
-    - Added
-    options for controls (see controls menu for how to play)
+    - Added options for
+    controls (see controls menu for how to play)
 
-    - A new round no
-    longer starts when the player has lost a life
+    - A new round no longer starts
+    when the player has lost a life
 
-    - Removed unnecessary placeholder
-    text from version notes now that it naturally can be scrolled through
+    - Removed unnecessary placeholder text from
+    version notes now that it naturally can be scrolled through
 
-    -
-    Added splash screen
+    - Added splash
+    screen
 
     - Added Music and sound effects
 
 
     Version 0.0.1.0s1:
 
-    -
-    Added Main menu
+    - Added
+    Main menu
 
     - Added Credits menu
 
     - Added Version Notes menu
 
-    -
-    Added a Quit Game button
+    - Added
+    a Quit Game button
 
-    - Added a round counter to main game; When the
-    player or centipede dies, a new round will begin and the counter will increase
+    - Added a round counter to main game; When the player
+    or centipede dies, a new round will begin and the counter will increase
 
 
 
@@ -2085,7 +2094,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2030082738}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.21137175
+  m_Size: 0.18178871
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

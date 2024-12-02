@@ -52,6 +52,44 @@ public class Controller : MonoBehaviour
         //
         //controls.Gameplay.cStart.performed += ctx => controllerstart = true;
         //controls.Gameplay.cStart.canceled += ctx => controllerstart = false;
+
+        mode = PlayerPrefs.GetString("control mode", "keyboard");
+
+        switch (PlayerPrefs.GetInt("Keyboard Fire", 0))
+        {
+            case 0: firekey = KeyCode.Space; break;
+            case 1: firekey = KeyCode.Mouse0; break;
+        }
+
+        switch (PlayerPrefs.GetInt("Pointer Move", 0))
+        {
+            case 0: follow = KeyCode.Mouse0; alwaysFollow = false; break;
+            case 1: follow = KeyCode.Mouse1; alwaysFollow = false; break;
+            case 2: alwaysFollow = true; break;
+        }
+
+        switch (PlayerPrefs.GetInt("Pointer Fire", 0))
+        {
+            case 0: firecursor = KeyCode.Space; break;
+            case 1: firecursor = KeyCode.Mouse0; break;
+        }
+
+        switch (PlayerPrefs.GetInt("Joystick Move", 0))
+        {
+            case 0: drag = KeyCode.Mouse0; alwaysDrag = false; break;
+            case 1: drag = KeyCode.Mouse1; alwaysDrag = false; break;
+            case 2: alwaysDrag = true; break;
+        }
+
+        switch (PlayerPrefs.GetInt("Joystick Fire", 0))
+        {
+            case 0: firejoystick = KeyCode.Space; break;
+            case 1: firejoystick = KeyCode.Mouse0; break;
+        }
+
+        sensitivity = PlayerPrefs.GetFloat("sensitivity", 0.5f);
+        pos.x = PlayerPrefs.GetFloat("xpos", 30.0f);
+        pos.y = PlayerPrefs.GetFloat("ypos", -10.0f);
     }
 
     void Update() {

@@ -40,5 +40,6 @@ public class ControlAccess : MonoBehaviour
         }
         Audio.play("select");
         FindObjectOfType<Controller>().mode = c;
+        PlayerPrefs.SetString("control mode", c);
     }
 }

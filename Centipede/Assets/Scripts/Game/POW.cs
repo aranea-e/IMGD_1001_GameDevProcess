@@ -102,6 +102,7 @@ public class POW : MonoBehaviour
         if (destType == 1)
         {
             spawnPOWEffect(p.transform.position);
+            PlayerPrefs.SetInt("Mario", 1);
         }
         Destroy(p.gameObject);
         sActive = false;

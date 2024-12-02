@@ -26,12 +26,15 @@ public class JoystickSliders : MonoBehaviour
         {
             case 0:
             c.sensitivity = sliders[0].value;
+            PlayerPrefs.SetFloat("sensitivity", sliders[0].value);
             break;
             case 1:
             c.pos.x = sliders[1].value;
+            PlayerPrefs.SetFloat("xpos", sliders[1].value);
             break;
             case 2:
             c.pos.y = sliders[2].value;
+            PlayerPrefs.SetFloat("ypos", sliders[2].value);
             break;
         }
     }

@@ -99,6 +99,7 @@ public class Fruit : MonoBehaviour
         if (destType == 1)
         {
             GameManager.Instance.IncreaseScore(points[fruitType]);
+            PlayerPrefs.SetInt("Pac", 1);
         }
         Destroy(f.gameObject);
         sActive = false;
