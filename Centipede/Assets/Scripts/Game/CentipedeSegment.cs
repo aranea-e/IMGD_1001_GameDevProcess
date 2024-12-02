@@ -120,6 +120,19 @@ public class CentipedeSegment : MonoBehaviour
             collision.collider.enabled = false;
             centipede.Remove(this);
         }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("POW"))
+        {
+            centipede.Remove(this);
+        }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("EnemyDart") && collision.collider.enabled)
+        {
+            Audio.play("hit-c");
+            collision.collider.enabled = false;
+            Destroy(collision.gameObject);
+            centipede.Remove(this, false);
+        }
     }
 
     private void OnDrawGizmos()

@@ -69,7 +69,12 @@ public class TetronimoSegment : MonoBehaviour
     }
 
     void Update() {
-        Vector2 targetPosition = new Vector2(transform.position.x + (((speed / 2) * PlayerInputs.direction.x) * Time.deltaTime),
+        Vector2 playerDirection = PlayerInputs.direction;
+        if (playerDirection.magnitude > 1.0f)
+        {
+            playerDirection = playerDirection.normalized;
+        }
+        Vector2 targetPosition = new Vector2(transform.position.x + (((speed / 2) * playerDirection.x) * Time.deltaTime),
                                              transform.position.y - (speed * Time.deltaTime));
         if (Physics2D.OverlapBox(targetPosition, Vector2.zero, 0f, collisionMask) || targetPosition.y < -25)
         {
@@ -96,6 +101,18 @@ public class TetronimoSegment : MonoBehaviour
         {
             Audio.play("hit-c");
             t.destroyTetronimo(1);
+        }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("POW"))
+        {
+            t.destroyTetronimo(3);
+        }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("EnemyDart"))
+        {
+            Audio.play("hit-c");
+            Destroy(collision.gameObject);
+            t.destroyTetronimo(0);
         }
     }
 }

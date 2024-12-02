@@ -28,6 +28,25 @@ public class Mushroom : MonoBehaviour
         }
     }
 
+    public void Damage(int amount, bool score)
+    {
+        health -= amount;
+
+        if (health > 0)
+        {
+            spriteRenderer.sprite = states[states.Length - health];
+        }
+        else
+        {
+            if (score)
+            {
+                GameManager.Instance.IncreaseScore(points);
+            }
+            
+            Destroy(gameObject);
+        }
+    }
+
     public void Heal()
     {
         health = states.Length;
@@ -39,6 +58,16 @@ public class Mushroom : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Dart")) {
             Audio.play("hit-m");
             Damage(1);
+        }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("POW")) {
+            Damage(10);
+        }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("EnemyDart")) {
+            Audio.play("hit-m");
+            Destroy(collision.gameObject);
+            Damage(1, false);
         }
     }
 

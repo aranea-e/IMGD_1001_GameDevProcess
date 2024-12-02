@@ -17,5 +17,9 @@ public class FruitInstance : MonoBehaviour
             Audio.play("hit-f");
             FindObjectOfType<Fruit>().destroyFruit(this, 1);
         }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("POW")) {
+            FindObjectOfType<Fruit>().destroyFruit(this, 1);
+        }
     }
 }

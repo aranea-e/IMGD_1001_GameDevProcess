@@ -61,6 +61,42 @@ public class Centipede : MonoBehaviour
         }
     }
 
+    [ContextMenu("kill")]
+    public void KillCentipede() {
+        foreach (CentipedeSegment seg in FindObjectsOfType<CentipedeSegment>())
+        {
+            Remove(seg, false);
+        }
+    }
+    public void Remove(CentipedeSegment segment, bool score)
+    {
+        if (score)
+        {
+            int points = segment.isHead ? pointsHead : pointsBody;
+            GameManager.Instance.IncreaseScore(points);
+        }
+        
+
+        GameManager.Instance.SpawnMushroom(segment.transform.position);
+
+        if (segment.ahead != null) {
+            segment.ahead.behind = null;
+        }
+
+        if (segment.behind != null)
+        {
+            segment.behind.ahead = null;
+            segment.behind.UpdateHeadSegment();
+        }
+
+        segments.Remove(segment);
+        Destroy(segment.gameObject);
+
+        if (segments.Count == 0) {
+            GameManager.Instance.NextLevel();
+        }
+    }
+
     public void Respawn()
     {
         speed = 20f;

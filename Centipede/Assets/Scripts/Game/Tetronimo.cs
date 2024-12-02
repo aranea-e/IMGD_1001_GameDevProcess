@@ -28,14 +28,14 @@ public class Tetronimo : MonoBehaviour
         destroyTetronimo(2);
         sTime = 0.0f;
         mTimeElapsed = 0.0f;
-        if (GameManager.Instance.round == 1)
+        if (((GameManager.Instance.round % 2) == 1) && (GameManager.Instance.round < 6))
         {
             sChance = -1f;
             return;
         }
-        sChance = 0.1f;
+        sChance = 0.33f;
         sRate = 1.0f;
-        mTime = 5.0f;
+        mTime = 3.0f;
         for (int i = 2; i < GameManager.Instance.round; i++)
         {
             sChance *= 1.25f;
@@ -126,9 +126,10 @@ public class Tetronimo : MonoBehaviour
             break;
         }
 
+        Vector2 mod = new Vector2(Random.Range(-12, 13), 0);
         for (int i = 0; i < 4; i++)
         {
-            Instantiate(tetronimoPrefab, spawnLocations[i], Quaternion.identity, transform);
+            Instantiate(tetronimoPrefab, spawnLocations[i] + mod, Quaternion.identity, transform);
         }
     }
 
@@ -137,14 +138,14 @@ public class Tetronimo : MonoBehaviour
         destroyTetronimo(0);
     }
     public void destroyTetronimo(int destType) {
-        if (destType == 1)
+        if (destType == 1 || destType == 3)
         {
             GameManager.Instance.IncreaseScore(points);
         }
         
         foreach (TetronimoSegment segment in FindObjectsOfType<TetronimoSegment>())
         {
-            if (destType == 1)
+            if (destType <= 1)
             {
                 GameManager.Instance.SpawnMushroom(segment.transform.position);
             }

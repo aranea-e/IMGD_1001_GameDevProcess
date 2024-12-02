@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     private MushroomField mushroomField;
     private Tetronimo tetronimo;
     private Fruit fruit;
+    private Invader invader;
+    private POW pow;
     
     public Mushroom mushroomPrefab;
 
@@ -46,6 +48,8 @@ public class GameManager : MonoBehaviour
         mushroomField = FindObjectOfType<MushroomField>();
         tetronimo = FindObjectOfType<Tetronimo>();
         fruit = FindObjectOfType<Fruit>();
+        invader = FindObjectOfType<Invader>();
+        pow = FindObjectOfType<POW>();
 
         NewGame();
     }
@@ -70,6 +74,8 @@ public class GameManager : MonoBehaviour
         gameOver.SetActive(false);
         tetronimo.newRound();
         fruit.newRound();
+        invader.newRound();
+        pow.newRound();
     }
 
     public void ResetRound()
@@ -87,6 +93,8 @@ public class GameManager : MonoBehaviour
         blaster.Respawn();
         tetronimo.newRound();
         fruit.newRound();
+        invader.newRound();
+        pow.newRound();
     }
 
     private void GameOver()
@@ -107,6 +115,8 @@ public class GameManager : MonoBehaviour
         centipede.Respawn();
         tetronimo.newRound();
         fruit.newRound();
+        invader.newRound();
+        pow.newRound();
     }
 
     private void SetScore(int value)

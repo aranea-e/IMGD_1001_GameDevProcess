@@ -979,56 +979,74 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Version 0.0.1.s3:
+  m_text: 'Version 0.0.1.s5:
 
-    - Added sound effects menu
+    -Added POW blocks which spawn on level 3 and onward
 
-    - Added additonal
-    options to controls, such as Joystick aiming, sensitivity and additional keybindiong
-    options for pointer and keyboard
 
-    - Added Tetriminoe enemy that spawns in
-    level 2
+    Version
+    0.0.1.s4:
+
+    -Redid menus to get rid of default assets and replace the with
+    custom fonts, UI textures, and animations
+
+    -Added Pac-Man fruits which spawn
+    on all levels
+
+    -Added Space Invader which spawns on levels 3, 5, and 7+ (Tetronimo
+    has been moved to levels 2, 4, and 6+)
+
+
+    Version 0.0.1.s3:
+
+    - Added sound
+    effects menu
+
+    - Added additonal options to controls, such as Joystick aiming,
+    sensitivity and additional keybindiong options for pointer and keyboard
+
+    -
+    Added Tetrimino enemy that spawns in level 2
 
 
     Version 0.0.1.s2:
 
-    - Added options for controls (see controls
-    menu for how to play)
-
-    - A new round no longer starts when the player has
-    lost a life
-
-    - Removed unnecessary placeholder text from version notes now
-    that it naturally can be scrolled through
-
-    - Added splash screen
-
     - Added
-    Music and sound effects
+    options for controls (see controls menu for how to play)
+
+    - A new round no
+    longer starts when the player has lost a life
+
+    - Removed unnecessary placeholder
+    text from version notes now that it naturally can be scrolled through
+
+    -
+    Added splash screen
+
+    - Added Music and sound effects
 
 
     Version 0.0.1.0s1:
 
-    - Added Main menu
-
     -
-    Added Credits menu
+    Added Main menu
+
+    - Added Credits menu
 
     - Added Version Notes menu
 
-    - Added a Quit Game button
-
     -
-    Added a round counter to main game; When the player or centipede dies, a new
-    round will begin and the counter will increase
+    Added a Quit Game button
+
+    - Added a round counter to main game; When the
+    player or centipede dies, a new round will begin and the counter will increase
 
 
 
-    Version 0.0.0.0s1:
+    Version
+    0.0.0.0s1:
 
-    -
-    Added main gameplay loop
+    - Added main gameplay loop
 
     - Added art assets'
   m_isRightToLeft: 0
@@ -1535,7 +1553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 0
+  m_ShowMaskGraphic: 1
 --- !u!114 &1471735687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1549,7 +1567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3921569, g: 0.3921569, b: 0.3921569, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2067,7 +2085,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2030082738}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.29553503
+  m_Size: 0.21137175
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
