@@ -992,6 +992,14 @@ MonoBehaviour:
 
     -Settings now save if application is closed
 
+    -Named the
+    game and updated title screen to match
+
+    -Added new animations to represent
+    the new featured games
+
+    -Added an aiming line
+
 
     Version 0.0.1.s4:
 
@@ -2094,7 +2102,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2030082738}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.18178871
+  m_Size: 0.1671668
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
